@@ -44,7 +44,6 @@
     <project path="device/google/accessory/arduino" name="device/google/accessory/arduino" groups="device" />
     <project path="device/google/accessory/demokit" name="device/google/accessory/demokit" groups="device" />
     <project path="device/lge/hammerhead" name="android_device_lge_hammerhead" groups="device,hammerhead" remote="BeerGang" revision="kitkat" />
-    <project path="device/lge/hammerhead-kernel" name="device/lge/hammerhead-kernel" groups="device,hammerhead" />
     <project path="device/lge/mako" name="android_device_lge_mako" groups="device,mako" remote="BeerGang" revision="kitkat" />
     <project path="device/lge/mako-kernel" name="device/lge/mako-kernel" groups="device,mako" />
     <project path="device/sample" name="device/sample" groups="pdk" />
@@ -295,6 +294,7 @@
     <project path="hardware/ti/omap4xxx" name="platform/hardware/ti/omap4xxx" groups="omap4" />
     <project path="hardware/ti/wlan" name="platform/hardware/ti/wlan" />
     <project path="hardware/ti/wpan" name="platform/hardware/ti/wpan" />
+    <project path="kernel/lge/hammerhead" name="android_kernel_lge_hammerhead" remote="BeerGang" revision="kitkat" />
     <project path="libcore" name="platform/libcore" />
     <project path="libnativehelper" name="platform/libnativehelper" groups="pdk-java" />
     <project path="ndk" name="platform/ndk" />
