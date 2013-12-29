@@ -2,16 +2,18 @@
 <manifest>
     
     <remote  name="aosp"
-    fetch="https://android-review.googlesource.com/" />
+        fetch="https://android-review.googlesource.com/" />
     <remote name="BeerGang"
-    fetch="git://github.com/BeerGang/" />
+        fetch="git://github.com/BeerGang/" />
     <remote name="CyanogenMod"
-    fetch="git://github.com/CyanogenMod/" />
+        fetch="git://github.com/CyanogenMod/" />
+    <remote name="github"
+        fetch="git://github.com/" />
     <remote name="Omni"
-    fetch="git://github.com/omnirom/" />
+        fetch="git://github.com/omnirom/" />
     <default revision="refs/tags/android-4.4.1_r1"
-    remote="aosp"
-    sync-j="4" />
+        remote="aosp"
+        sync-j="4" />
     
     <project path="build" name="platform_build" groups="pdk" remote="BeerGang" revision="kitkat" >
         <copyfile src="core/root.mk" dest="Makefile" />
