@@ -31,11 +31,6 @@
     <project path="developers/docs" name="platform/developers/docs" />
     <project path="developers/samples/android" name="platform/developers/samples/android" />
     <project path="development" name="platform/development" />
-    <project path="device/asus/deb" name="device/asus/deb" groups="device,flo" />
-    <project path="device/asus/flo" name="device/asus/flo" groups="device,flo" />
-    <project path="device/asus/flo-kernel" name="device/asus/flo-kernel" groups="device,flo" />
-    <project path="device/asus/grouper" name="device/asus/grouper" groups="device,grouper" />
-    <project path="device/asus/tilapia" name="device/asus/tilapia" groups="device,grouper" />
     <project path="device/common" name="device/common" />
     <project path="device/generic/armv7-a-neon" name="device/generic/armv7-a-neon" groups="pdk" />
     <project path="device/generic/common" name="device/generic/common" groups="pdk" />
@@ -434,10 +429,5 @@
     <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
     <project path="vendor/lge" name="android_vendor_lge" remote="BeerGang" revision="kitkat" />
     <project path="vendor/beergang" name="android_vendor_beergang" remote="BeerGang" revision="kitkat" />
-    
-    <!--Tmobile Themes-->
-    <project path="vendor/tmobile/apps/ThemeChooser" name="themes-platform-vendor-tmobile-apps-ThemeChooser" remote="CyanogenMod" revision="cm-11.0" />
-    <project path="vendor/tmobile/libs/com.tmobile.themes" name="android_vendor_tmobile_libs_com.tmobile.themes" remote="CyanogenMod" revision="cm-11.0" />
-    <project path="vendor/tmobile/providers/ThemeManager" name="android_vendor_tmobile_providers_ThemeManager" remote="CyanogenMod" revision="cm-11.0" />
-    
+
 </manifest>
