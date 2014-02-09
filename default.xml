@@ -23,7 +23,7 @@
     <project path="bionic" name="platform/bionic" groups="pdk" />
     <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy" />
     <project path="bootable/diskinstaller" name="platform/bootable/diskinstaller" />
-    <project path="bootable/recovery" name="platform/bootable/recovery" groups="pdk" />
+    <project path="bootable/recovery" name="platform_bootable_recovery" remote="BeerGang" revision="kitkat" />
     <project path="cts" name="platform/cts" groups="cts" />
     <project path="dalvik" name="platform/dalvik" />
     <project path="developers/build" name="platform/developers/build" />
@@ -59,7 +59,7 @@
     <project path="external/arduino" name="platform/external/arduino" />
     <project path="external/bison" name="platform/external/bison" groups="pdk" />
     <project path="external/blktrace" name="platform/external/blktrace" />
-    <project path="external/bluetooth/bluedroid" name="platform/external/bluetooth/bluedroid" groups="pdk" />
+    <project path="external/bluetooth/bluedroid" name="platform_external_bluetooth_bluedroid" remote="BeerGang" revision="kitkat" />
     <project path="external/bouncycastle" name="platform/external/bouncycastle" />
     <project path="external/bsdiff" name="platform/external/bsdiff" groups="pdk" />
     <project path="external/bzip2" name="platform/external/bzip2" groups="pdk" />
@@ -93,7 +93,7 @@
     <project path="external/chromium_org/tools/grit" name="platform/external/chromium_org/tools/grit" />
     <project path="external/chromium_org/tools/gyp" name="platform/external/chromium_org/tools/gyp" />
     <project path="external/chromium_org/v8" name="platform/external/chromium_org/v8" />
-    <project path="external/clang" name="platform/external/clang" groups="pdk" />
+    <project path="external/clang" name="platform_external_clang" remote="BeerGang" revision="kitkat" />
     <project path="external/compiler-rt" name="platform/external/compiler-rt" groups="pdk" />
     <project path="external/dexmaker" name="platform/external/dexmaker" />
     <project path="external/dhcpcd" name="platform/external/dhcpcd" />
@@ -291,7 +291,7 @@
     <project path="libnativehelper" name="platform/libnativehelper" groups="pdk-java" />
     <project path="ndk" name="platform/ndk" />
     <project path="packages/apps/BasicSmsReceiver" name="platform/packages/apps/BasicSmsReceiver" />
-    <project path="packages/apps/Bluetooth" name="platform/packages/apps/Bluetooth" />
+    <project path="packages/apps/Bluetooth" name="platform_packages_apps_Bluetooth" revision="BeerGang" revision="kitkat" />
     <project path="packages/apps/Browser" name="platform/packages/apps/Browser" />
     <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" />
     <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" />
