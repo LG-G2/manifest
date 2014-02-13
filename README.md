@@ -1,7 +1,7 @@
-BeerKit
+BeerGang
 Getting Started
 
-To get started with Android/BeerKit, you'll need to get familiar with Git and Repo.
+To get started with BeerGang, you'll need to get familiar with Git and Repo.
 
     repo init -u git://github.com/BeerGang/manifest.git -b kitkat
 
