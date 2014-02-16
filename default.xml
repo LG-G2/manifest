@@ -11,7 +11,7 @@
         fetch="git://github.com/" />
     <remote name="omnirom"
         fetch="git://github.com/omnirom/" />
-    <default revision="refs/tags/android-4.4.1_r1"
+    <default revision="refs/tags/android-4.4.1_r2"
         remote="aosp"
         sync-j="4" />
     
@@ -45,7 +45,6 @@
     <project path="device/lge/hammerhead" name="android_device_lge_hammerhead" groups="device,hammerhead" remote="BeerGang" revision="kitkat" />
     <project path="device/lge/mako" name="android_device_lge_mako" groups="device,mako" remote="BeerGang" revision="kitkat" />
     <project path="device/sample" name="device/sample" groups="pdk" />
-    <project path="device/samsung/manta" name="device/samsung/manta" groups="device,manta" />
     <project path="docs/source.android.com" name="platform/docs/source.android.com" />
     <project path="external/aac" name="platform/external/aac" groups="pdk" />
     <project path="external/android-clat" name="platform/external/android-clat" />
@@ -241,7 +240,7 @@
     <project path="external/yaffs2" name="platform/external/yaffs2" groups="pdk" />
     <project path="external/zlib" name="platform/external/zlib" groups="pdk" />
     <project path="external/zxing" name="platform/external/zxing" />
-    <project path="frameworks/av" name="vertigo2012/android_frameworks_av" remote="github" revision="android-4.4" />
+    <project path="frameworks/av" name="platform_frameworks_av" remote="BeerGang" revision="kitkat" />
     <project path="frameworks/base" name="platform_frameworks_base" remote="BeerGang" revision="kitkat" />
     <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
     <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
