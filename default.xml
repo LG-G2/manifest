@@ -2,28 +2,34 @@
 <manifest>
     
     <remote  name="aosp"
-        fetch="https://android-review.googlesource.com/" />
+    fetch="https://android-review.googlesource.com/" />
     <remote name="BeerGang"
-        fetch="git://github.com/BeerGang/" />
+    fetch="git://github.com/BeerGang/" />
     <remote name="CyanogenMod"
-        fetch="git://github.com/CyanogenMod/" />
+    fetch="git://github.com/CyanogenMod/" />
     <remote name="github"
-        fetch="git://github.com/" />
+    fetch="git://github.com/" />
     <remote name="omnirom"
-        fetch="git://github.com/omnirom/" />
+    fetch="git://github.com/omnirom/" />
+    <remote name="home"
+    fetch="git://github.com/benjamingoodwin/" />
     <default revision="refs/tags/android-4.4.2_r2"
-        remote="aosp"
-        sync-j="4" />
+    remote="aosp"
+    sync-j="4" />
     
-    <project path="build" name="platform_build" groups="pdk" remote="BeerGang" revision="kitkat" >
+    <project path="build" name="platform_build" groups="pdk" remote="home" revision="kitkat" >
         <copyfile src="core/root.mk" dest="Makefile" />
+        <copyfile src="lazyAll.sh" dest="lazyAll.sh" />
+        <copyfile src="lazyClobber.sh" dest="lazyClobber.sh" />
+        <copyfile src="lazyMine.sh" dest="lazyMine.sh" />
+        <copyfile src="lazyOthers.sh" dest="lazyOthers.sh" />
     </project>
     <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
     <project path="art" name="platform/art" />
     <project path="bionic" name="android_bionic" remote="omnirom" revision="android-4.4" />
     <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy" />
     <project path="bootable/diskinstaller" name="platform/bootable/diskinstaller" />
-    <project path="bootable/recovery" name="platform_bootable_recovery" remote="BeerGang" revision="kitkat" />
+    <project path="bootable/recovery" name="android_bootable_recovery" remote="omnirom" revision="android-4.4" />
     <project path="cts" name="platform/cts" groups="cts" />
     <project path="dalvik" name="android_dalvik" remote="omnirom" revision="android-4.4" />
     <project path="developers/build" name="platform/developers/build" />
@@ -31,7 +37,6 @@
     <project path="developers/docs" name="platform/developers/docs" />
     <project path="developers/samples/android" name="platform/developers/samples/android" />
     <project path="development" name="android_development" remote="omnirom" revision="android-4.4" />
-    <project path="device/asus/flo" name="android_device_asus_flo" remote="BeerGang" revision="kitkat" />
     <project path="device/common" name="device/common" />
     <project path="device/generic/armv7-a-neon" name="device/generic/armv7-a-neon" groups="pdk" />
     <project path="device/generic/common" name="device/generic/common" groups="pdk" />
@@ -43,8 +48,6 @@
     <project path="device/generic/x86" name="device/generic/x86" groups="pdk" />
     <project path="device/google/accessory/arduino" name="device/google/accessory/arduino" groups="device" />
     <project path="device/google/accessory/demokit" name="device/google/accessory/demokit" groups="device" />
-    <project path="device/lge/hammerhead" name="android_device_lge_hammerhead" remote="BeerGang" revision="kitkat" />
-    <project path="device/lge/mako" name="android_device_lge_mako" remote="BeerGang" revision="kitkat" />
     <project path="device/sample" name="device/sample" groups="pdk" />
     <project path="docs/source.android.com" name="platform/docs/source.android.com" />
     <project path="external/aac" name="platform/external/aac" groups="pdk" />
@@ -59,7 +62,7 @@
     <project path="external/arduino" name="platform/external/arduino" />
     <project path="external/bison" name="platform/external/bison" groups="pdk" />
     <project path="external/blktrace" name="platform/external/blktrace" />
-    <project path="external/bluetooth/bluedroid" name="platform_external_bluetooth_bluedroid" remote="BeerGang" revision="kitkat" />
+    <project path="external/bluetooth/bluedroid" name="android_external_bluetooth_bluedroid" remote="omnirom" revision="android-4.4" />
     <project path="external/bouncycastle" name="platform/external/bouncycastle" />
     <project path="external/bsdiff" name="platform/external/bsdiff" groups="pdk" />
     <project path="external/bzip2" name="platform/external/bzip2" groups="pdk" />
@@ -93,7 +96,7 @@
     <project path="external/chromium_org/tools/grit" name="platform/external/chromium_org/tools/grit" />
     <project path="external/chromium_org/tools/gyp" name="platform/external/chromium_org/tools/gyp" />
     <project path="external/chromium_org/v8" name="platform/external/chromium_org/v8" />
-    <project path="external/clang" name="platform_external_clang" remote="BeerGang" revision="kitkat" />
+    <project path="external/clang" name="android_external_clang" remote="omnirom" revision="android-4.4" />
     <project path="external/compiler-rt" name="platform/external/compiler-rt" groups="pdk" />
     <project path="external/dexmaker" name="platform/external/dexmaker" />
     <project path="external/dhcpcd" name="platform/external/dhcpcd" />
@@ -235,21 +238,21 @@
     <project path="external/webp" name="platform/external/webp" />
     <project path="external/webrtc" name="platform/external/webrtc" groups="pdk" />
     <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" revision="android-4.4" remote="omnirom" groups="pdk" />
-    <project path="external/wpa_supplicant_8_ti" name="android_external_wpa_supplicant_8_ti" remote="CyanogenMod" revision="cm-11.0" />
+    <project path="external/wpa_supplicant_8_ti" name="CyanogenMod/android_external_wpa_supplicant_8_ti" remote="github" revision="cm-11.0" />
     <project path="external/xmlwriter" name="platform/external/xmlwriter" />
     <project path="external/xmp_toolkit" name="platform/external/xmp_toolkit" />
     <project path="external/yaffs2" name="platform/external/yaffs2" groups="pdk" />
     <project path="external/zlib" name="platform/external/zlib" groups="pdk" />
     <project path="external/zxing" name="platform/external/zxing" />
-    <project path="frameworks/av" name="platform_frameworks_av" remote="BeerGang" revision="kitkat" />
-    <project path="frameworks/base" name="platform_frameworks_base" remote="BeerGang" revision="kitkat" />
+    <project path="frameworks/av" name="android_frameworks_av" remote="omnirom" revision="android-4.4" />
+    <project path="frameworks/base" name="frameworks_base" remote="home" revision="kitkat" />
     <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
     <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
     <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
     <project path="frameworks/ex" name="platform/frameworks/ex" />
     <project path="frameworks/mff" name="platform/frameworks/mff" />
     <project path="frameworks/ml" name="platform/frameworks/ml" />
-    <project path="frameworks/native" name="android_frameworks_native" remote="BeerGang" revision="kitkat" />
+    <project path="frameworks/native" name="android_frameworks_native" remote="omnirom" revision="android-4.4" />
     <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" />
     <project path="frameworks/opt/carddav" name="platform/frameworks/opt/carddav" />
     <project path="frameworks/opt/colorpicker" name="platform/frameworks/opt/colorpicker" />
@@ -274,17 +277,17 @@
     <project path="hardware/broadcom/libbt" name="android_hardware_broadcom_libbt" remote="omnirom" revision="android-4.4" />
     <project path="hardware/broadcom/wlan" name="android_hardware_broadcom_wlan" remote="omnirom" revision="android-4.4" />
     <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense" />
-    <project path="hardware/libhardware" name="android_hardware_libhardware" remote="BeerGang" revision="kitkat" />
-    <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="BeerGang" revision="kitkat" />
+    <project path="hardware/libhardware" name="android_hardware_libhardware" remote="omnirom" revision="android-4.4" />
+    <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="omnirom" revision="android-4.4" />
     <project path="hardware/qcom/audio" name="android_hardware_qcom_audio" remote="omnirom" revision="android-4.4" />
     <project path="hardware/qcom/audio-caf" name="android_hardware_qcom_audio-caf" remote="omnirom" revision="android-4.4" />
     <project path="hardware/qcom/bt" name="android_hardware_qcom_bt" remote="omnirom" revision="android-4.4" />
     <project path="hardware/qcom/camera" name="platform/hardware/qcom/camera" groups="qcom" />
     <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="omnirom" revision="android-4.4" />
     <project path="hardware/qcom/display-caf" name="android_hardware_qcom_display-caf" remote="omnirom" revision="android-4.4" />
-    <project path="hardware/qcom/gps" name="android_hardware_qcom_gps" remote="CyanogenMod" revision="cm-11.0" />
+    <project path="hardware/qcom/gps" name="CyanogenMod/android_hardware_qcom_gps" remote="github" revision="cm-11.0" />
     <project path="hardware/qcom/keymaster" name="platform/hardware/qcom/keymaster" groups="qcom" />
-    <project path="hardware/qcom/media" name="android_hardware_qcom_media" remote="omnirom" revision="android-4.4" />
+    <project path="hardware/qcom/media" name="CyanogenMod/android_hardware_qcom_media" remote="github" revision="cm-11.0" />
     <project path="hardware/qcom/media-caf" name="android_hardware_qcom_media-caf" remote="omnirom" revision="android-4.4" />
     <project path="hardware/qcom/msm8960" name="platform/hardware/qcom/msm8960" groups="qcom_msm8960" />
     <project path="hardware/qcom/msm8x74" name="platform/hardware/qcom/msm8x74" groups="qcom_msm8x74" />
@@ -301,7 +304,7 @@
     <project path="libnativehelper" name="platform/libnativehelper" groups="pdk-java" />
     <project path="ndk" name="platform/ndk" />
     <project path="packages/apps/BasicSmsReceiver" name="platform/packages/apps/BasicSmsReceiver" />
-    <project path="packages/apps/Bluetooth" name="platform_packages_apps_Bluetooth" remote="BeerGang" revision="kitkat" />
+    <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="BeerGang" revision="kitkat" />
     <project path="packages/apps/Browser" name="platform/packages/apps/Browser" />
     <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" />
     <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" />
@@ -309,20 +312,21 @@
     <project path="packages/apps/Camera2" name="platform/packages/apps/Camera2" />
     <project path="packages/apps/CellBroadcastReceiver" name="platform/packages/apps/CellBroadcastReceiver" />
     <project path="packages/apps/CertInstaller" name="platform/packages/apps/CertInstaller" />
-    <project path="packages/apps/Contacts" name="platform_packages_apps_contacts" remote="BeerGang" revision="kitkat" />
+    <project path="packages/apps/Contacts" name="platform/packages/apps/Contacts" />
     <project path="packages/apps/ContactsCommon" name="platform/packages/apps/ContactsCommon" />
     <project path="packages/apps/DeskClock" name="platform/packages/apps/DeskClock" />
-    <project path="packages/apps/Dialer" name="platform_packages_apps_dialer" remote="BeerGang" revision="kitkat" />
-    <project path="packages/apps/Email" name="platform_packages_apps_email" remote="BeerGang" revision="kitkat" />
+    <project path="packages/apps/Dialer" name="platform/packages/apps/Dialer" />
+    <project path="packages/apps/Email" name="platform/packages/apps/Email" />
     <project path="packages/apps/Exchange" name="platform/packages/apps/Exchange" />
     <project path="packages/apps/Gallery" name="platform/packages/apps/Gallery" />
-    <project path="packages/apps/Gallery2" name="platform_packages_apps_gallery2" remote="BeerGang" revision="kitkat" />
+    <project path="packages/apps/Gallery2" name="platform/packages/apps/Gallery2" />
     <project path="packages/apps/HTMLViewer" name="platform/packages/apps/HTMLViewer" />
     <project path="packages/apps/InCallUI" name="platform/packages/apps/InCallUI" />
     <project path="packages/apps/KeyChain" name="platform/packages/apps/KeyChain" />
     <project path="packages/apps/Launcher3" name="platform/packages/apps/Launcher3" />
     <project path="packages/apps/LegacyCamera" name="platform/packages/apps/LegacyCamera" />
-    <project path="packages/apps/Mms" name="platform_packages_apps_mms" remote="BeerGang" revision="kitkat" />
+    <project path="packages/apps/Lightbulb" name="AOSPA/android_packages_apps_Lightbulb" remote="github" revision="kitkat" />
+    <project path="packages/apps/Mms" name="platform/packages/apps/Mms" />
     <project path="packages/apps/Nfc" name="platform/packages/apps/Nfc" />
     <project path="packages/apps/OneTimeInitializer" name="platform/packages/apps/OneTimeInitializer" />
     <project path="packages/apps/PackageInstaller" name="platform/packages/apps/PackageInstaller" />
@@ -331,14 +335,13 @@
     <project path="packages/apps/Protips" name="platform/packages/apps/Protips" />
     <project path="packages/apps/Provision" name="platform/packages/apps/Provision" />
     <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" />
-    <project path="packages/apps/Settings" name="platform_packages_apps_settings" remote="BeerGang" revision="kitkat"/>
+    <project path="packages/apps/Settings" name="platform_packages_apps_settings" remote="home" revision="kitkat"/>
     <project path="packages/apps/SmartCardService" name="platform/packages/apps/SmartCardService" />
     <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" />
     <project path="packages/apps/SpareParts" name="platform/packages/apps/SpareParts" />
     <project path="packages/apps/SpeechRecorder" name="platform/packages/apps/SpeechRecorder" />
     <project path="packages/apps/Stk" name="platform/packages/apps/Stk" />
     <project path="packages/apps/Tag" name="platform/packages/apps/Tag" />
-    <project path="packages/apps/Torch" name="android_packages_apps_Torch" remote="CyanogenMod" revision="cm-11.0" />
     <project path="packages/apps/UnifiedEmail" name="platform/packages/apps/UnifiedEmail" />
     <project path="packages/apps/VideoEditor" name="platform/packages/apps/VideoEditor" />
     <project path="packages/apps/VoiceDialer" name="platform/packages/apps/VoiceDialer" />
@@ -357,7 +360,7 @@
     <project path="packages/screensavers/Basic" name="platform/packages/screensavers/Basic" />
     <project path="packages/screensavers/PhotoTable" name="platform/packages/screensavers/PhotoTable" />
     <project path="packages/screensavers/WebView" name="platform/packages/screensavers/WebView" />
-    <project path="packages/services/Telephony" name="platform_packages_services_telephony" remote="BeerGang" revision="kitkat" />
+    <project path="packages/services/Telephony" name="platform_packages_services_Telephony" remote="home" revision="kitkat" />
     <project path="packages/wallpapers/Basic" name="platform/packages/wallpapers/Basic" />
     <project path="packages/wallpapers/Galaxy4" name="platform/packages/wallpapers/Galaxy4" />
     <project path="packages/wallpapers/HoloSpiral" name="platform/packages/wallpapers/HoloSpiral" />
@@ -416,7 +419,7 @@
     <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" />
     <project path="sdk" name="platform/sdk" />
     <project path="system/core" name="android_system_core" remote="BeerGang" revision="kitkat" />
-    <project path="system/extras" name="android_system_extras" remote="BeerGang" groups="pdk" revision="kitkat" />
+    <project path="system/extras" name="android_system_extras" remote="home" revision="kitkat" />
     <project path="system/media" name="android_system_media" groups="pdk" remote="omnirom" revision="android-4.4" />
     <project path="system/netd" name="platform/system/netd" groups="pdk" />
     <project path="system/security" name="platform/system/security" groups="pdk" />
@@ -432,6 +435,6 @@
     <project path="tools/motodev" name="platform/tools/motodev" groups="notdefault,motodev" />
     <project path="tools/studio/cloud" name="platform/tools/studio/cloud" groups="notdefault,tools" />
     <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
-    <project path="vendor/beergang" name="android_vendor_beergang" remote="BeerGang" revision="kitkat" />
-
+    <project path="vendor/beergang" name="android_vendor_beergang" remote="home" revision="kitkat" />
+    
 </manifest>
