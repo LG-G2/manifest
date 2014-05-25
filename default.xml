@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
     
-    <remote  name="aosp"
-    fetch="https://android-review.googlesource.com/" />
+    <remote name="aosp"
+            fetch="https://android-review.googlesource.com/" />
     <remote name="BeerGang"
-    fetch="git://github.com/BeerGang/" />
+            fetch="git://github.com/BeerGang/" />
     <remote name="CyanogenMod"
-    fetch="git://github.com/CyanogenMod/" />
+            fetch="git://github.com/CyanogenMod/" />
     <remote name="github"
-    fetch="git://github.com/" />
+            fetch="git://github.com/" />
     <remote name="omnirom"
-    fetch="git://github.com/omnirom/" />
+            fetch="git://github.com/omnirom/" />
     <remote name="home"
-    fetch="git://github.com/benjamingoodwin/" />
+            fetch="git://github.com/benjamingoodwin/" />
     <default revision="refs/tags/android-4.4.2_r2"
-    remote="aosp"
-    sync-j="4" />
+             remote="aosp"
+             sync-j="4" />
     
-    <project path="build" name="platform_build" groups="pdk" remote="home" revision="kitkat" >
+    <project path="build" name="platform_build" groups="pdk" remote="BeerGang" revision="kitkat" >
         <copyfile src="core/root.mk" dest="Makefile" />
         <copyfile src="lazyAll.sh" dest="lazyAll.sh" />
         <copyfile src="lazyClobber.sh" dest="lazyClobber.sh" />
@@ -245,7 +245,7 @@
     <project path="external/zlib" name="platform/external/zlib" groups="pdk" />
     <project path="external/zxing" name="platform/external/zxing" />
     <project path="frameworks/av" name="android_frameworks_av" remote="omnirom" revision="android-4.4" />
-    <project path="frameworks/base" name="frameworks_base" remote="home" revision="kitkat" />
+    <project path="frameworks/base" name="frameworks_base" remote="BeerGang" revision="kitkat" />
     <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
     <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
     <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
@@ -335,7 +335,7 @@
     <project path="packages/apps/Protips" name="platform/packages/apps/Protips" />
     <project path="packages/apps/Provision" name="platform/packages/apps/Provision" />
     <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" />
-    <project path="packages/apps/Settings" name="platform_packages_apps_settings" remote="home" revision="kitkat"/>
+    <project path="packages/apps/Settings" name="platform_packages_apps_settings" remote="BeerGang" revision="kitkat"/>
     <project path="packages/apps/SmartCardService" name="platform/packages/apps/SmartCardService" />
     <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" />
     <project path="packages/apps/SpareParts" name="platform/packages/apps/SpareParts" />
@@ -360,7 +360,7 @@
     <project path="packages/screensavers/Basic" name="platform/packages/screensavers/Basic" />
     <project path="packages/screensavers/PhotoTable" name="platform/packages/screensavers/PhotoTable" />
     <project path="packages/screensavers/WebView" name="platform/packages/screensavers/WebView" />
-    <project path="packages/services/Telephony" name="platform_packages_services_Telephony" remote="home" revision="kitkat" />
+    <project path="packages/services/Telephony" name="platform_packages_services_telephony" remote="BeerGang" revision="kitkat" />
     <project path="packages/wallpapers/Basic" name="platform/packages/wallpapers/Basic" />
     <project path="packages/wallpapers/Galaxy4" name="platform/packages/wallpapers/Galaxy4" />
     <project path="packages/wallpapers/HoloSpiral" name="platform/packages/wallpapers/HoloSpiral" />
@@ -419,7 +419,7 @@
     <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" />
     <project path="sdk" name="platform/sdk" />
     <project path="system/core" name="android_system_core" remote="BeerGang" revision="kitkat" />
-    <project path="system/extras" name="android_system_extras" remote="home" revision="kitkat" />
+    <project path="system/extras" name="android_system_extras" remote="BeerGang" revision="kitkat" />
     <project path="system/media" name="android_system_media" groups="pdk" remote="omnirom" revision="android-4.4" />
     <project path="system/netd" name="platform/system/netd" groups="pdk" />
     <project path="system/security" name="platform/system/security" groups="pdk" />
@@ -435,6 +435,6 @@
     <project path="tools/motodev" name="platform/tools/motodev" groups="notdefault,motodev" />
     <project path="tools/studio/cloud" name="platform/tools/studio/cloud" groups="notdefault,tools" />
     <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
-    <project path="vendor/beergang" name="android_vendor_beergang" remote="home" revision="kitkat" />
+    <project path="vendor/beergang" name="android_vendor_beergang" remote="BeerGang" revision="kitkat" />
     
 </manifest>
