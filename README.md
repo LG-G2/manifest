@@ -3,7 +3,7 @@ Getting Started
 
 To get started with BeerGang, you'll need to get familiar with Git and Repo.
 
-    repo init -u git://github.com/BeerGang/manifest.git -b kitkat-wip
+    repo init -u git://github.com/LG-G2/manifest.git -b kitkat-wip
 
 Then to sync up:
 
